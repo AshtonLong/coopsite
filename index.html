@@ -65,11 +65,11 @@
 
       /* Subtle space grid background */
       .bg-grid {
-        position: fixed; inset: 0; z-index: -2; pointer-events: none;
+        position: fixed; inset: -12vmax; z-index: -2; pointer-events: none;
         background:
-          radial-gradient(800px 400px at 10% 10%, rgba(124,92,255,.18), transparent 60%),
-          radial-gradient(800px 400px at 90% 20%, rgba(0,224,184,.16), transparent 60%),
-          radial-gradient(800px 500px at 50% 90%, rgba(244,93,93,.12), transparent 60%);
+          radial-gradient(60vmax 40vmax at 10% 10%, rgba(124,92,255,.18), transparent 60%),
+          radial-gradient(60vmax 40vmax at 90% 20%, rgba(0,224,184,.16), transparent 60%),
+          radial-gradient(70vmax 45vmax at 50% 90%, rgba(244,93,93,.12), transparent 60%);
       }
       .bg-noise {
         position: fixed; inset: -40px; z-index: -1; pointer-events: none;
@@ -82,7 +82,7 @@
         position: relative; overflow: hidden; padding-top: 7rem; padding-bottom: 4rem;
       }
       .hero::before {
-        content: ""; position: absolute; inset: -30%; z-index: -1; filter: blur(60px);
+        content: ""; position: absolute; inset: -40vmax; z-index: -1; filter: blur(60px);
         background: conic-gradient(from 180deg at 50% 50%, var(--primary), var(--secondary), var(--accent), var(--primary));
         animation: spin 18s linear infinite;
         opacity: .22;
