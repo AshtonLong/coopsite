@@ -951,3 +951,102 @@ body:hover .cursor-dot {
         top: 10%;
     }
 }
+
+/* REFLECTIONS SECTION */
+.reflections-section {
+    padding: 8rem 2rem;
+    background: #080808;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+.reflections-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+}
+
+.reflection-prompt {
+    border: 1px dashed #444;
+    padding: 2rem;
+    height: fit-content;
+    position: sticky;
+    top: 6rem;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.prompt-header {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+}
+
+.prompt-label {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    letter-spacing: 2px;
+}
+
+.prompt-text {
+    font-family: var(--font-body);
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: #fff;
+}
+
+.reflection-response {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.response-block {
+    position: relative;
+    padding-left: 2rem;
+    border-left: 2px solid #333;
+    transition: border-left-color 0.3s;
+}
+
+.response-block:hover {
+    border-left-color: var(--accent-color);
+}
+
+.response-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-accent);
+    text-transform: uppercase;
+}
+
+.response-block p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 1.5rem;
+    max-width: 65ch;
+}
+
+/* Responsive tweaks for Reflections */
+@media (max-width: 768px) {
+    .reflections-wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .reflection-prompt {
+        position: relative;
+        top: 0;
+    }
+
+    .prompt-text {
+        font-size: 1.25rem;
+    }
+
+    .response-title {
+        font-size: 1.75rem;
+    }
+}
