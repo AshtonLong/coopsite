@@ -31,7 +31,6 @@
 
     <!-- Custom Cursor -->
     <div class="cursor-dot"></div>
-    <div class="cursor-text">VIEW</div>
 
     <!-- Navigation -->
     <nav class="top-nav mix-blend">
@@ -280,9 +279,8 @@
             // Custom Cursor Logic
             const activeCursor = () => {
                 const dot = document.querySelector('.cursor-dot');
-                const text = document.querySelector('.cursor-text');
 
-                if (!dot || !text) return;
+                if (!dot) return;
 
                 // Enable custom cursor styles
                 document.body.classList.add('custom-cursor-active');
@@ -294,32 +292,10 @@
                         duration: 0.1,
                         overwrite: true
                     });
-                    gsap.to(text, {
-                        x: e.clientX,
-                        y: e.clientY,
-                        duration: 0.15,
-                        overwrite: true
-                    });
-                });
-
-                // Hover effects
-                document.querySelectorAll('a, .h-card, .grid-item, button').forEach(el => {
-                    el.addEventListener('mouseenter', () => {
-                        gsap.to(dot, { scale: 4, duration: 0.3 });
-                        if (el.classList.contains('h-card')) {
-                            text.innerHTML = "DRAG";
-                        } else {
-                            text.innerHTML = "VIEW";
-                        }
-                        gsap.to(text, { opacity: 1, duration: 0.3 });
-                    });
-                    el.addEventListener('mouseleave', () => {
-                        gsap.to(dot, { scale: 1, duration: 0.3 });
-                        gsap.to(text, { opacity: 0, duration: 0.3 });
-                    });
                 });
             };
             activeCursor();
+
 
             try {
                 // Hero Text Reveal
