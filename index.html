@@ -510,7 +510,7 @@
                     if (wrapper) {
                         const getScrollAmount = () => {
                             let wrapperWidth = wrapper.scrollWidth;
-                            return -(wrapperWidth - window.innerWidth);
+                            return -(wrapperWidth - window.innerWidth + 500);
                         };
 
                         gsap.to(wrapper, {
